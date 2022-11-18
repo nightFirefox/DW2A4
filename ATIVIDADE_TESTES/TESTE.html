@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <body>
+        <h1>Fetch API</h1> 
+        <form>
+            <div>CEP: <input name="cep" value="01001000"/></div>
+            <div>Cidade: <input name="cidade" disabled></div> 
+        </form> 
+    
+
+        <script>
+        
+            const $campoCEP = document.querySelector('[name="cep"]')
+            const $campoCidade = document.querySelector('[name="cidade"]')
+            
+            $campoCEP.addEventListener("blur", infoEvento => 
+            {
+                console.log(infoEvento) 
+                const cep = infoEvento.target.value 
+                $campoCidade.value=""
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(function(resposta)
+                {
+                    return resposta.json()
+                })
+                .then(function(dadosCEP)
+                {
+                    //console.log(dadosCEP)
+                    var elementosCep = [dadosCEP]
+
+                    //console.log(elementosCep)
+
+                    for(i in elementosCep)
+                    {
+                        console.log(elementosCep[i])
+                    }
+
+                   // $campoCidade.value = dadosCEP.localidade
+                })
+            })
+
+        </script>
+    </body>
+</html>

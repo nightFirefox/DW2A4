@@ -1,0 +1,15 @@
+const url = "https://viacep.com.br/ws/01001000/json/"
+        
+        fetch(url) 
+        
+        // response recebe dados de resposta da API 
+        .then(response => response.json()) 
+        .then(dataCEP =>
+            {
+                console.log(dataCEP) 
+                console.log(dataCEP.localidade)
+            }
+        )
+        
+        // Executado em caso de erro
+        .catch(err => console.log("Via CEP " + err)) 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adicionando React em um minuto</title>
+  </head>
+  <body>
+    <h2>Adicionando React em um minuto</h2>
+    <p>Esta página demonstra o uso do React sem ferramentas de construção.</p>
+    <p>O React é carregado como uma tag de script.</p>
+
+    <!-- Div onde será carregado o componente. -->
+    <div id="like_button_container"></div>
+
+    <!-- Carregamento da React. -->
+    <!-- Nota: ao implementar a aplicação, substitua "development.js" por "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Carregando o componente React. -->
+    <script src="like_button.js"></script>
+  </body>
+</html>
