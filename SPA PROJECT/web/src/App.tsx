@@ -1,5 +1,11 @@
+import { Forms } from "./components/Forms/Form";
 import { Widget } from "./components/Widget";
 
 export function App() {
-  return <Widget />
+  return (
+            <div> 
+              <Widget />
+              <Forms/>
+            </div>
+          )
 }
